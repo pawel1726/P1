@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+</head>
+<body>
+
+<div id="container">
+	<div id="map-box">
+		<div id="hero"></div>
+	</div>
+
+	<div id="background">
+		sdf
+	</div>
+	<div id="startWindow">
+		<div id="btn_addHP"></div><div id=""></div>
+		<div id="btn_addPower"></div><div id=""></div>
+		<div id="btn_addAcc"></div><div id=""></div>
+	</div>
+
+	<div class="monsterStats">
+		<div id="mKlocekMaxHp">
+			<div id="mKlocekHp"></div>
+		</div>
+		HP:<div id="monsterHP" class="monsterPlace"></div>
+		Power:<div id="monsterPower" class="monsterPlace"></div>
+		<!-- Accuracy:<div id="monsterAccuracy" class="monsterPlace"></div> -->
+	</div>
+
+	<div id="target">
+		<div id="monsterImg"></div>
+	</div>
+
+
+
+	<div class="playerStats">
+		<div id="pKlocekMaxHp">
+			<div id="pKlocekHp"></div>
+		</div>
+		HP:<div id="playerHP" class="playerPlace"></div>
+		Max HP:<div id="MaxHP" class="playerPlace"></div>
+		Power:<div id="playerPowerPlace" class="playerPlace"></div>
+		<!-- Accuracy:<div id="playerAccuracy" class="playerPlace"></div> -->
+
+		X <div id="map-x" class="cord"></div>
+		Y <div id="map-y" class="cord"></div>
+	</div>
+
+	<div id="player">
+		PLAYER
+	</div>
+
+	<div id="controls">
+		<div id="atk" class="btn">Atk</div>
+		<div id="inv" class="btn">Inv</div>
+		<div id="run" class="btn">run</div>
+	</div>
+</div>
+
+
+
+<div id="inventory">
+	
+</div>
+
+<br>
+<div id="mapTable">
+	<table>
+	    <tr>
+	        <td class="blk"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	    </tr>
+	    <tr>
+	        <td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td>
+	        <td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td></td><td class="blk"></td><td></td>
+	    </tr>
+	    <tr>
+	        <td></td><td class="blk"></td><td></td><td class="active"></td><td></td><td></td><td></td><td></td>
+	        <td class="blk"></td><td class="blk"></td><td></td><td></td><td></td><td></td><td class="blk"></td><td class="blk"></td>
+	    </tr>
+	    <tr>
+	        <td></td><td class="blk"></td><td></td><td></td><td></td><td></td><td></td><td></td>
+	        <td class="blk"></td><td class="blk"></td><td></td><td></td><td></td><td></td><td></td><td class="blk"></td>
+	    </tr>
+	    <tr>
+	        <td></td><td class="blk"></td><td></td><td></td><td class="blk"></td><td class="blk"></td><td></td><td></td>
+	        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="blk"></td>
+	    </tr>
+	    <tr>
+	        <td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td>
+	        <td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td><td class="blk"></td>
+	    </tr>
+    </table>
+</div>
+</body>
+
+<script type="text/javascript" src="./js/app_v3.js"></script>
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./lib/jquery-ui.min.js"></script>
+</html>
