@@ -1,5 +1,50 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 	
+	var intro = document.querySelector("#intro");
+	$("#start_btn").delay(20000).show(0);
+	$("#start_btn").on("click", function(event) {
+		$(this).fadeOut(1000);
+		$("#loading").show();
+
+		var images = [];
+		function preload() {
+    		for (var i = 0; i < arguments.length; i++) {
+        		images[i] = new Image();
+        		images[i].src = preload.arguments[i];
+    		}
+    		
+    		intro.style.display = "none";
+
+		}
+
+		//-- usage --//
+	preload(
+    	"img/boss.png",
+    	"img/hero.png",
+    	"img/hero_big_atk.png",
+    	"img/hero_big.png",
+    	"img/hppoint.png",
+    	"img/hppoint_over.png",
+    	"img/invent_bg.png",
+    	"img/map2.png",
+    	"img/medi.png",
+    	"img/medi_over.png",
+    	"img/powerpoint.png",
+    	"img/powerpoint_over.png",
+    	"img/s1.jpg",
+    	"img/s2.jpg",
+    	"img/s3.jpg",
+    	"img/s4.jpg",
+    	"img/skorio_ss.png",
+    	"img/skoriodsrt_ss.png",
+    	"img/snek_ss.png",
+    	"img/roach_ss.png",
+    	"img/special.jpg",
+    	"img/tlo.jpg"
+	)
+
+	}); //start_btn
+
 	var mHPplace = document.querySelector("#monsterHP");
 	var mPowerplace = document.querySelector("#monsterPower");
 	// var mAccuracyplace = document.querySelector("#monsterAccuracy");
@@ -9,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	var $inventory = $("#inventory");
 	
-	var playerHP = 111;
-	var playerMaxHp = 111;
+	var playerHP = 100;
+	var playerMaxHp = 100;
 	var playerPowerNumber = 20;
 	// var playerAcc = 30;
 
@@ -103,6 +148,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					
 					$('#hero').css( "background-position-x", "-20px");
 					$('#hero').css( "background-position-y", "0px");
+					regenHP();
+					czyWalka();
 					}// if c
 				break;
 			// Up Arrow Pressed
@@ -124,8 +171,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					
 					
 					regenHP();
-					
-					czyWalka();
+					czyCat();
+					czyWalka();                     
 					}
 					
 				break;
@@ -151,6 +198,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					
 					$('#hero').css( "background-position-x", "-20px");
 					$('#hero').css( "background-position-y", "-20px");
+					regenHP();
+					czyWalka();
 					}
 				break;
 			// Down Arrow Pressed
@@ -171,6 +220,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					$('#map-box').css( "background-position-y", "-=20");
 					$('#hero').css( "background-position-x", "-40px");
 					$('#hero').css( "background-position-y", "-20px");
+					regenHP();
+					czyWalka();
 				}
 				break;
 		}
@@ -266,6 +317,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				$("#player").delay(1000).fadeOut();
 				monsterKlocekHp.style.width = "0px";
 				
+				if (myX === 8 & myY === 2) {
+					$("#winner").show();
+				};
+
 				$inventory.delay(1000).fadeIn();
 
 				// $("#background").delay(1000).removeClass("bgAnimate");  // -------
@@ -297,6 +352,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					$("#controls").fadeOut();
 					myKlocekHp.style.width = "0px";
 					console.log("game over");
+
+					$("#gameover").fadeIn();
 				} //nested if
 
 
@@ -353,13 +410,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					$("#controls").fadeOut();
 					myKlocekHp.style.width = "0px";
 					console.log("game over");
+					$("#gameover").fadeIn();
 				} //nested if
 
 
 			}  // else if
 		}; //monsterAtakujeTeraz
 
+		function czyCat(){
+			if ((myX === 12 & myY === 35) && ( $inventory.children('div.cat') ).length === 0) {
+				
+				$("#dangerous").fadeIn().delay(2500).fadeOut();
+				var item = document.createElement("div");
 
+						item.className = "item cat";
+						
+						$inventory.append(item);
+			};
+		}
 		
 
 		function czyWalka(){
@@ -367,11 +435,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					var rndm = Math.floor((Math.random() * 10) + 1);
 					console.log("czy fajt " + rndm);
 					
-					if (myX === 13 & myY === 45) {
+					if (myX === 12 && myY === 35) {
+						rndm = 1;
+					};
+
+					if (myX === 8 && myY === 2) {
 						rndm = 9;
 					}
 
-					if(rndm > 8) {
+					if(rndm > 7) {
 						
 						function losujMonster(){
 							
@@ -380,13 +452,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 								minimum = 0;
 							} else if (myY >= 33) {
 								level = 2;
-								minimum = 10;
+								minimum = 20;
 							} else if (myY >= 16) {
 								level = 3;
-								minimum = 20;
+								minimum = 40;
 							} else if (myY >= 1) {
 								level = 4;
-								minimum = 30;
+								minimum = 60;
 							}
 							
 							var mHP = Math.floor((Math.random() * 50) + 1) + minimum;
@@ -411,8 +483,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 							mPowerplace.innerHTML = wonsz.Power;
 							// mAccuracyplace.innerHTML = wonsz.Accuracy;    ACCURACY OUT
 
-							if (myX === 13 & myY === 45) {
-								mHPplace.innerHTML = 500;
+							if (myX === 8 & myY === 2) {
+								mHPplace.innerHTML = 500;         
 								mPowerplace.innerHTML = 100;
 								mHP = 500;
 								
@@ -431,15 +503,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 							window.removeEventListener("keydown", mapArrows, false);
 
-							monsterPictures = new Array( "skorio_s.png" , "skoriodsrt_s.png" , "snek_s.png" );
-							whatPicture = Math.floor((Math.random() * 3) );
+							monsterPictures = new Array( "skorio_s.png" , "skoriodsrt_s.png" , "snek_s.png" , "roach_s.png");
+							whatPicture = Math.floor((Math.random() * monsterPictures.length) );
 
 							monsterPic = document.querySelector("#monsterImg");
 							fullMonsterPath = "url('./img/" + monsterPictures[whatPicture] + "')";
 							monsterPic.style.backgroundImage = fullMonsterPath;
 
-							if (myX === 13 & myY === 45) {
-								monsterPic.style.backgroundImage = "url('./img/boss.png')";
+							if (myX === 8 & myY === 2) {
+								monsterPic.style.backgroundImage = "url('./img/boss.png')";  
 							}
 
 
@@ -454,8 +526,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 								BgPath = "url('./img/s4.jpg')";
 							}
 
-							if (myX === 13 & myY === 45) {
-								BgPath = "url('./img/special.jpg')";
+							if (myX === 8 & myY === 2) {
+								BgPath = "url('./img/special.jpg')";      
 							}
 
 							bgPic.style.backgroundImage = BgPath;
