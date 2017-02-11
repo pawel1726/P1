@@ -242,14 +242,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     				if(playerHP > playerMaxHp) {
     				playerHP = playerMaxHp;
     				pHPplace.innerHTML = playerHP;
-
+					}
     				myKlocekHp.style.width = playerHP + "px";
     				$inventory.hide();
     				monsterAtakujeTeraz();
     				$("#controls").show();
     				$inventory.children('div.point_maxHP').show();
 					$inventory.children('div.point_power').show();
-    			} 
+    			 
 
     		
     		// $(this).remove().delay(300);
