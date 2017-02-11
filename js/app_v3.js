@@ -97,19 +97,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     	//console.log( $( this ).text() );
 	});
 
-
-
-
 	var xplace = document.querySelector("#map-x");
 	var yplace = document.querySelector("#map-y");
 
 	var mapBox = document.querySelector("#map-box");
 	var myX = 3;
 	var myY = 46;
-
-	
-
-	
 
 	var pHPplace = document.querySelector("#playerHP");
 	var pMaxHPplace = document.querySelector("#MaxHP");
@@ -168,7 +161,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					$('#map-box').css( "background-position-y", "+=20");
 					$('#hero').css( "background-position-x", "0px");
 					$('#hero').css( "background-position-y", "0px");
-					
 					
 					regenHP();
 					czyCat();
@@ -259,14 +251,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					$inventory.children('div.point_power').show();
     			} 
 
-
-    			
     		
     		// $(this).remove().delay(300);
     		
     		}
 			}); //one
-
 
 
 		}// inventory niepuste
@@ -293,8 +282,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 			$("#monsterImg").effect( "pulsate", "fast" );
 
-			
-			
 			var monsterKlocekHp = document.querySelector("#mKlocekHp");
 			// monsterKlocekMax.style.width = mhp + "px";
 			// monsterKlocekHp.style.width = mhp + "px";
@@ -341,8 +328,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				$("#target").animate({ "left": "-=50px" }, "50" );
 				$("#target").animate({ "left": "+=50px" }, "50" );
 				$("#player").effect( "pulsate", "fast" );
-
-				
 
 				pKlocek();
 
@@ -400,8 +385,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				$("#target").animate({ "left": "+=50px" }, "50" );
 				$("#player").effect( "pulsate", "fast" );
 
-				
-
 				pKlocek();
 
 				pHPplace.innerHTML = playerHP;
@@ -443,7 +426,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						rndm = 9;
 					}
 
-					if(rndm > 7) {
+					if(rndm > 8) {
 						
 						function losujMonster(){
 							
@@ -498,12 +481,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 							monsterKlocekMax.style.width = mHP + "px";
 
 
-
-
-
 							window.removeEventListener("keydown", mapArrows, false);
 
-							monsterPictures = new Array( "skorio_s.png" , "skoriodsrt_s.png" , "snek_s.png" , "roach_s.png");
+							monsterPictures = new Array( "skorio_ss.png" , "skoriodsrt_ss.png" , "snek_ss.png" , "roach_ss.png");
 							whatPicture = Math.floor((Math.random() * monsterPictures.length) );
 
 							monsterPic = document.querySelector("#monsterImg");
